@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                input message: 'Need approval to deply? (Click "Deploy" to ignore)'
                 sh './jenkins/scripts/deliver.sh'
             }
         }
